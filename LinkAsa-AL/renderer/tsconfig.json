@@ -1,5 +1,16 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/renderer/**/*",
+    "../global.d.ts"
+, "components/dashboard/components/label/Label.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "incremental": true
+  }
 }

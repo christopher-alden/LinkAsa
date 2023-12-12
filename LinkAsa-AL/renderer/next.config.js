@@ -4,7 +4,8 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  webpack: (config) => {
-    return config
-  },
+  // Comment out the custom webpack configuration as a test
+  // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  //   return config;
+  // },
 }
