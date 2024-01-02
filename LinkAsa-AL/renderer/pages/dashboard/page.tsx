@@ -1,5 +1,5 @@
 // Dashboard.js
-import React, { Suspense, useContext } from "react";
+import React, { Suspense, useContext, useEffect, useState } from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
 import Sidebar from "../../components/layout/sidebar/Sidebar";
 import { useUser } from "../../hooks/useUser";
@@ -33,7 +33,7 @@ const DashboardPlaceholder = () => {
 const Dashboard = () => {
   const { userData } = useUser();
   const { content, switchContent, accessibleContentObjects } = useContent(userData?.role);
-
+  
   const renderContent = () => {
     const ContentComponent = dashboardContents[content];
     return (
@@ -41,6 +41,7 @@ const Dashboard = () => {
     );
   };
 
+  
   return (
     <ProtectedRoute>
       <Box
@@ -49,7 +50,9 @@ const Dashboard = () => {
           height: "100vh",
           display: "flex",
           flexDirection: "row",
+          backgroundColor:'transparent'
         }}
+        
       >
         <Box sx={{ width: "300px", flexShrink: 0 }}>
           <Sidebar

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { fetchRoomChat, sendMessage } from "../../../services/chatRoomAccess";
-import MessageBubble from "../components/message/MessageBubble";
+import MessageBubble from "../../widgets/message/MessageBubble";
 import { useUser } from "../../../hooks/useUser";
-import { Box, TextField, Button, CircularProgress } from "@mui/material";
+import { Box, TextField, Button } from "@mui/material";
 import DashboardCard from "../../shared/DashboardCard";
-import ChatRoom from "../components/message/ChatRoom";
+import TopDown from "../../layout/chat/TopDown";
 
 const Broadcast = () => {
   const [messages, setMessages] = useState([]);
@@ -38,8 +38,10 @@ const Broadcast = () => {
 
   return (
     <DashboardCard title="Broadcast">
-      <ChatRoom>
-        <Box sx={{ flexGrow: 0, overflowY: "auto", padding: 1 , minHeight:"80%",}}>
+      <TopDown>
+        <Box
+          sx={{ flexGrow: 0, overflowY: "auto", padding: 1, minHeight: "80%" }}
+        >
           {messages.map((message, index, arr) => {
             const showSender =
               index === 0 || arr[index - 1].sender !== message.sender;
@@ -72,7 +74,7 @@ const Broadcast = () => {
             </Button>
           </Box>
         </form>
-      </ChatRoom>
+      </TopDown>
     </DashboardCard>
   );
 };

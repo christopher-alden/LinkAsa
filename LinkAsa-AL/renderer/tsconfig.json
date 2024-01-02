@@ -3,10 +3,11 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
+    "**/*.js",
     "**/*.tsx",
     "src/renderer/**/*",
-    "../global.d.ts"
-, "components/dashboard/components/label/Label.jsx"  ],
+    "../global.d.ts",
+    "components/widgets/label/Label.tsx", "components/dashboard/maintenanceManagement"  ],
   "exclude": [
     "node_modules"
   ],

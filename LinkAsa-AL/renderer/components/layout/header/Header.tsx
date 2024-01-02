@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   AppBar,
@@ -14,14 +14,11 @@ import PropTypes from "prop-types";
 // components
 import Profile from "./Profile";
 import { IconBellRinging, IconMenu } from "@tabler/icons-react";
-import Clock from "../../dashboard/components/notify/Clock";
-
-interface ItemType {}
+import Clock from "../../widgets/notify/Clock";
 
 const Header = () => {
   const AppBarStyled = styled(AppBar)(({ theme }) => ({
     boxShadow: "none",
-    background: theme.palette.background.paper,
     justifyContent: "center",
     backdropFilter: "blur(4px)",
   }));
@@ -75,10 +72,6 @@ const Header = () => {
       </ToolbarStyled>
     </AppBarStyled>
   );
-};
-
-Header.propTypes = {
-  sx: PropTypes.object,
 };
 
 export default Header;

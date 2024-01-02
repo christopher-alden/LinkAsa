@@ -9,7 +9,7 @@ import { CacheProvider } from "@emotion/react";
 import "../styles/fonts.css";
 import "../styles/global.css";
 import { UserProvider } from "../context/userContext";
-import ProtectedComponent from "../components/middleware/ProtectedRoute";
+import '../public/plis.css'
 
 const clientSideEmotionCache = createEmotionCache();
 

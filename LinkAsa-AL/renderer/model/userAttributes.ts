@@ -27,11 +27,10 @@ export enum UserRole {
   HRD = "Human Resource Department",
 
   Testing = "AL23-2",
-}
 
-export enum UserStatus{
-    active = "Active",
-    pending = "Pending",
-    leave = "On Leave",
-    deactivated = "Deactivated"
+  //WORKERS
+  Flight_Crew = "Flight Crew",
+  Staff = "Staff",
+  Security = "Security",
+
 }

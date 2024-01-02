@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { UserRole, UserStatus } from "../model/userAttributes";
+import { UserRole } from "../model/userAttributes";
+import { UserStatus } from "../model/status";
 
 export const useRegister = () => {
   const [state, setState] = useState({
