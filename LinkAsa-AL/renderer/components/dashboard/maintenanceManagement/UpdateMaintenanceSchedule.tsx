@@ -15,7 +15,7 @@ import useCrud from "../../../hooks/useCrud";
 import { clientDb } from "../../../lib/firebase";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { MaintenanceStatus } from "../../../model/status"; // Adjust this import as needed
+import { MaintenanceStatus } from "../../../model/status";
 import dayjs from "dayjs";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 

@@ -5,25 +5,24 @@ import TableCell from '@mui/material/TableCell';
 
 // ----------------------------------------------------------------------
 type GenericDataTableEmptyRowsProps = {
-    emptyRows: number,
-    height: number
-}
+	emptyRows: number;
+	height: number;
+};
 const GenericDataTableEmptyRows = ({ emptyRows, height }: GenericDataTableEmptyRowsProps) => {
-  if (!emptyRows) {
-    return null;
-  }
+	if (!emptyRows) {
+		return null;
+	}
 
-  return (
-    <TableRow
-      sx={{
-        ...(height && {
-          height: height * emptyRows,
-        }),
-      }}
-    >
-      <TableCell colSpan={9} />
-    </TableRow>
-  );
-}
+	return (
+		<TableRow
+			sx={{
+				...(height && {
+					height: height * emptyRows,
+				}),
+			}}>
+			<TableCell colSpan={9} />
+		</TableRow>
+	);
+};
 
-export default GenericDataTableEmptyRows
+export default GenericDataTableEmptyRows;
